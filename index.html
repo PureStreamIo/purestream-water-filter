@@ -24,6 +24,7 @@
         body {
             background-color: var(--white);
             color: var(--dark);
+            overflow-x: hidden;
             padding-top: 70px;
         }
         nav {
@@ -284,23 +285,9 @@
         <div class="gallery-container">
             <div class="main-product-view" id="mainView"></div>
             <div class="thumbnail-grid">
-                        function updateProductVariant(variantId, element) {
-            currentVariantId = variantId;
-            const data = productVariants[variantId];
-            
-            // Updates main image window view smoothly
-            document.getElementById('mainView').style.backgroundImage = `url(${data.img})`;
-            
-            // Updates structural text content fields instantly
-            document.getElementById('dynamicTitle').innerHTML = data.title;
-            document.getElementById('dynamicDesc').textContent = data.desc;
-            document.getElementById('dynamicPrice').textContent = `$${data.price.toFixed(2)}`;
-            
-            // Refreshes the blue active thumbnail borders
-            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
-            element.classList.add('active');
-        }
-
+                <div class="thumb active" style="background-image: url('1.jpg')" onclick="updateProductVariant(1, this)"></div>
+                <div class="thumb" style="background-image: url('2.jpg')" onclick="updateProductVariant(2, this)"></div>
+                <div class="thumb" style="background-image: url('3.jpg')" onclick="updateProductVariant(3, this)"></div>
             </div>
         </div>
     </header>
