@@ -117,7 +117,8 @@
             border-radius: 24px;
             border: 1px solid var(--border);
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            background-image: url('1.jpg');
+            background-image: url('1.jpg'); /* Default view uses image 1 */
+            transition: background-image 0.2s ease-in-out;
         }
         .thumbnail-grid {
             display: grid;
@@ -269,6 +270,7 @@
                 <span>Total:</span>
                 <span id="cartTotal">$0.00</span>
             </div>
+            <!-- Live Checkout Anchor Hook -->
             <a href="https://stripe.com" class="checkout-btn" id="checkoutRedirect">Proceed to Checkout</a>
         </div>
     </div>
@@ -283,6 +285,7 @@
         <div class="gallery-container">
             <div class="main-product-view" id="mainView"></div>
             <div class="thumbnail-grid">
+                <!-- Interactive click triggers are fully connected below -->
                 <div class="thumb active" style="background-image: url('1.jpg')" onclick="changeImage('1.jpg', this)"></div>
                 <div class="thumb" style="background-image: url('2.jpg')" onclick="changeImage('2.jpg', this)"></div>
                 <div class="thumb" style="background-image: url('3.jpg')" onclick="changeImage('3.jpg', this)"></div>
@@ -302,4 +305,3 @@
                 <p>Architectural matte black design housing advanced dual-stream utility. Fits perfectly onto standard kitchen countertops with an integrated, intelligent display interface.</p>
             </div>
             <div class="card">
-                <h3>🔬 Transparent Engineering</h3>
