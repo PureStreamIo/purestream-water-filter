@@ -78,17 +78,20 @@
             line-height: 1.1;
             margin-bottom: 1.5rem;
             font-weight: 700;
+            transition: opacity 0.15s ease-in-out;
         }
         .hero-text p {
             font-size: 1.25rem;
             color: var(--gray);
             margin-bottom: 2rem;
             line-height: 1.5;
+            transition: opacity 0.15s ease-in-out;
         }
         .price-tag {
             font-size: 2.5rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
+            transition: opacity 0.15s ease-in-out;
         }
         .cta-btn {
             background-color: var(--primary);
@@ -117,7 +120,7 @@
             border-radius: 24px;
             border: 1px solid var(--border);
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            background-image: url('1.jpg'); /* Default view uses image 1 */
+            background-image: url('1.jpg');
             transition: background-image 0.2s ease-in-out;
         }
         .thumbnail-grid {
@@ -202,6 +205,7 @@
         }
         .cart-items {
             flex-grow: 1;
+            overflow-y: auto;
         }
         .cart-item {
             display: flex;
@@ -270,25 +274,24 @@
                 <span>Total:</span>
                 <span id="cartTotal">$0.00</span>
             </div>
-            <!-- Live Checkout Anchor Hook -->
             <a href="https://stripe.com" class="checkout-btn" id="checkoutRedirect">Proceed to Checkout</a>
         </div>
     </div>
 
     <header class="hero">
         <div class="hero-text">
-            <h1>Pure Water Surges.<br>Fill Cups in 2.6s.</h1>
-            <p>Say goodbye to trickling streams. The PureStream Pro 1200G delivers an ultra-high initial flow rate that runs like a waterfall. Premium multi-stage tankless reverse osmosis meets intelligent real-time digital monitoring for completely pure water with zero wait.</p>
-            <div class="price-tag">$199.99</div>
+            <!-- Dynamic elements tied to click actions -->
+            <h1 id="dynamicTitle">Pure Water Surges.<br>Fill Cups in 2.6s.</h1>
+            <p id="dynamicDesc">Say goodbye to trickling streams. The PureStream Pro 1200G delivers an ultra-high initial flow rate that runs like a waterfall. Premium multi-stage tankless reverse osmosis meets intelligent real-time digital monitoring for completely pure water with zero wait.</p>
+            <div class="price-tag" id="dynamicPrice">$199.99</div>
             <button class="cta-btn" id="addToCartBtn">Add to Cart</button>
         </div>
         <div class="gallery-container">
             <div class="main-product-view" id="mainView"></div>
             <div class="thumbnail-grid">
-                <!-- Interactive click triggers are fully connected below -->
-                <div class="thumb active" style="background-image: url('1.jpg')" onclick="changeImage('1.jpg', this)"></div>
-                <div class="thumb" style="background-image: url('2.jpg')" onclick="changeImage('2.jpg', this)"></div>
-                <div class="thumb" style="background-image: url('3.jpg')" onclick="changeImage('3.jpg', this)"></div>
+                <div class="thumb active" style="background-image: url('1.jpg')" onclick="updateProductVariant(1, this)"></div>
+                <div class="thumb" style="background-image: url('2.jpg')" onclick="updateProductVariant(2, this)"></div>
+                <div class="thumb" style="background-image: url('3.jpg')" onclick="updateProductVariant(3, this)"></div>
             </div>
         </div>
     </header>
@@ -302,6 +305,3 @@
             </div>
             <div class="card">
                 <h3>🚰 Sleek Matte Faucet</h3>
-                <p>Architectural matte black design housing advanced dual-stream utility. Fits perfectly onto standard kitchen countertops with an integrated, intelligent display interface.</p>
-            </div>
-            <div class="card">
