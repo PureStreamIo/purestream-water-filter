@@ -104,7 +104,6 @@
         .cta-btn:hover {
             background-color: var(--primary-hover);
         }
-        /* Product Showcase & Multi-Image Gallery Layout */
         .gallery-container {
             display: flex;
             flex-direction: column;
@@ -118,7 +117,7 @@
             border-radius: 24px;
             border: 1px solid var(--border);
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            background-image: url('https://unsplash.com');
+            background-image: url('product1.jpg');
         }
         .thumbnail-grid {
             display: grid;
@@ -136,6 +135,48 @@
         }
         .thumb.active {
             border-color: var(--primary);
+        }
+        .newsletter-section {
+            padding: 4rem 5%;
+            background-color: var(--white);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+        }
+        .newsletter-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .newsletter-container h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+        .newsletter-container p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+        .email-form {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .email-input {
+            width: 100%;
+            max-width: 350px;
+            padding: 0.8rem 1.2rem;
+            border-radius: 25px;
+            border: 1px solid var(--border);
+            font-size: 1rem;
+            outline: none;
+        }
+        .email-submit {
+            background-color: var(--dark);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
         }
         .features {
             background-color: var(--light);
@@ -245,6 +286,9 @@
         @media (max-width: 768px) {
             .hero { grid-template-columns: 1fr; text-align: center; }
             .hero-text h1 { font-size: 2.5rem; }
+            .email-form { flex-direction: column; align-items: center; }
+            .email-input { max-width: 100%; }
+            .email-submit { width: 100%; }
         }
     </style>
 </head>
@@ -270,7 +314,7 @@
                 <span>Total:</span>
                 <span id="cartTotal">$0.00</span>
             </div>
-            <!-- Complete Ordering System Hook: Stripe Checkout Link -->
+            <!-- Insert your real Stripe Payment Link in href below -->
             <a href="https://stripe.com" class="checkout-btn" id="checkoutRedirect">Proceed to Checkout</a>
         </div>
     </div>
@@ -283,17 +327,3 @@
             <button class="cta-btn" id="addToCartBtn">Add to Cart</button>
         </div>
         <div class="gallery-container">
-            <div class="main-product-view" id="mainView"></div>
-            <div class="thumbnail-grid">
-                <div class="thumb active" style="background-image: url('https://unsplash.com')" onclick="changeImage('https://unsplash.com', this)"></div>
-                <div class="thumb" style="background-image: url('https://unsplash.com')" onclick="changeImage('https://unsplash.com', this)"></div>
-                <div class="thumb" style="background-image: url('https://unsplash.com')" onclick="changeImage('https://unsplash.com', this)"></div>
-            </div>
-        </div>
-    </header>
-
-    <section class="features">
-        <h2>Engineered for Purity</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>⚡ 7-in-1 RO Filtration</h3>
