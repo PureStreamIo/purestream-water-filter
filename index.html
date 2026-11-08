@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PureStream Pro | Complete 7-in-1 Reverse Osmosis</title>
+    <title>PureStream Pro | 1200 GPD Dual-Flow Tankless RO System</title>
     <style>
         :root {
             --primary: #0071e3;
@@ -111,7 +111,7 @@
         }
         .main-product-view {
             width: 100%;
-            height: 400px;
+            height: 420px;
             background-size: cover;
             background-position: center;
             border-radius: 24px;
@@ -125,7 +125,7 @@
             gap: 1rem;
         }
         .thumb {
-            height: 90px;
+            height: 95px;
             background-size: cover;
             background-position: center;
             border-radius: 12px;
@@ -135,48 +135,6 @@
         }
         .thumb.active {
             border-color: var(--primary);
-        }
-        .newsletter-section {
-            padding: 4rem 5%;
-            background-color: var(--white);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            text-align: center;
-        }
-        .newsletter-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .newsletter-container h3 {
-            font-size: 1.75rem;
-            margin-bottom: 0.5rem;
-        }
-        .newsletter-container p {
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-        }
-        .email-form {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-        }
-        .email-input {
-            width: 100%;
-            max-width: 350px;
-            padding: 0.8rem 1.2rem;
-            border-radius: 25px;
-            border: 1px solid var(--border);
-            font-size: 1rem;
-            outline: none;
-        }
-        .email-submit {
-            background-color: var(--dark);
-            color: var(--white);
-            border: none;
-            padding: 0.8rem 1.8rem;
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
         }
         .features {
             background-color: var(--light);
@@ -286,9 +244,6 @@
         @media (max-width: 768px) {
             .hero { grid-template-columns: 1fr; text-align: center; }
             .hero-text h1 { font-size: 2.5rem; }
-            .email-form { flex-direction: column; align-items: center; }
-            .email-input { max-width: 100%; }
-            .email-submit { width: 100%; }
         }
     </style>
 </head>
@@ -314,16 +269,37 @@
                 <span>Total:</span>
                 <span id="cartTotal">$0.00</span>
             </div>
-            <!-- Insert your real Stripe Payment Link in href below -->
             <a href="https://stripe.com" class="checkout-btn" id="checkoutRedirect">Proceed to Checkout</a>
         </div>
     </div>
 
     <header class="hero">
         <div class="hero-text">
-            <h1>Pure Water.<br>Zero Compromise.</h1>
-            <p>The PureStream Pro features an advanced 7-in-1 Reverse Osmosis filtration hub. No complex under-sink plumbing required—enjoy instant, NSF-certified removal of 99.9% of microplastics, lead, and total dissolved solids directly from your countertop.</p>
+            <h1>1200 GPD Flow.<br>Pure Innovation.</h1>
+            <p>Meet the PureStream Pro 1200G—an industrial-grade, tankless multi-stage reverse osmosis filtration system engineered directly into a sleek countertop cabinet. Experience zero-wait hydration that fills a glass in 5 seconds flat while cutting wastewater in half.</p>
             <div class="price-tag">$199.99</div>
             <button class="cta-btn" id="addToCartBtn">Add to Cart</button>
         </div>
         <div class="gallery-container">
+            <div class="main-product-view" id="mainView"></div>
+            <div class="thumbnail-grid">
+                <div class="thumb active" style="background-image: url('product1.jpg')" onclick="changeImage('product1.jpg', this)"></div>
+                <div class="thumb" style="background-image: url('product2.jpg')" onclick="changeImage('product2.jpg', this)"></div>
+                <div class="thumb" style="background-image: url('product3.jpg')" onclick="changeImage('product3.jpg', this)"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="features">
+        <h2>Engineered for High-Flow Purity</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>⚡ 1200 GPD Rapid Gush</h3>
+                <p>Features an unmatched 0.85 GPM direct-flow engine. Get instant, refreshing purification on-demand without bulk storage tanks freezing up your counter space.</p>
+            </div>
+            <div class="card">
+                <h3>🚰 Smart Dual-Flow Faucet</h3>
+                <p>Smarter utility separation: left-side active carbon flow handles ultra-fast washing streams, while right-side 0.0001μm 11-stage filters manage pure drinking and formula output.</p>
+            </div>
+            <div class="card">
+                <h3>🌱 Eco-Wise 3:1 Efficiency</h3>
