@@ -15,7 +15,6 @@
             --border: #d2d2d7;
             --success: #34c759;
         }
-
         * {
             margin: 0;
             padding: 0;
@@ -23,22 +22,19 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             scroll-behavior: smooth;
         }
-
         body {
             background-color: var(--white);
             color: var(--dark);
             overflow-x: hidden;
             padding-top: 70px;
         }
-
         nav {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 70px;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(20px);
+            background: #ffffff;
             border-bottom: 1px solid var(--border);
             z-index: 100;
             display: flex;
@@ -46,14 +42,12 @@
             align-items: center;
             padding: 0 5%;
         }
-
         .logo {
             font-weight: 700;
             font-size: 1.25rem;
             color: var(--primary);
             text-decoration: none;
         }
-
         .cart-btn {
             background: none;
             border: none;
@@ -64,7 +58,6 @@
             align-items: center;
             gap: 5px;
         }
-
         .cart-count {
             background: var(--primary);
             color: var(--white);
@@ -73,7 +66,6 @@
             border-radius: 10px;
             font-weight: bold;
         }
-
         header {
             padding: 4rem 5%;
             min-height: calc(100vh - 70px);
@@ -81,7 +73,6 @@
             align-items: center;
             background: radial-gradient(circle at 80% 20%, #e3f2fd 0%, #ffffff 50%);
         }
-
         .hero-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -91,28 +82,24 @@
             margin: 0 auto;
             width: 100%;
         }
-
         .hero-text h1 {
             font-size: 3.5rem;
             line-height: 1.1;
             margin-bottom: 1.5rem;
             font-weight: 700;
         }
-
         .hero-text p {
             font-size: 1.25rem;
             color: var(--gray);
             margin-bottom: 2rem;
             line-height: 1.5;
         }
-
         .price-tag {
             font-size: 2rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
             color: var(--dark);
         }
-
         .cta-btn {
             background-color: var(--primary);
             color: var(--white);
@@ -124,24 +111,20 @@
             cursor: pointer;
             transition: background 0.2s;
         }
-
         .cta-btn:hover {
             background-color: var(--primary-hover);
         }
-
         .hero-image {
             display: flex;
             justify-content: center;
             align-items: center;
         }
-
-        /* 3D-Look PureStream Pro Countertop System Mockup */
         .filter-mockup {
             width: 320px;
             height: 460px;
             background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
             border-radius: 40px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.08), inset 0 2px 4px #fff;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
             border: 2px solid var(--border);
             position: relative;
             display: flex;
@@ -150,14 +133,6 @@
             padding: 2.5rem;
             overflow: hidden;
         }
-
-        .filter-mockup::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 12px;
-            background: linear-gradient(90deg, #00d5ff, #0071e3);
-        }
-
         .filter-display {
             background: #111827;
             border-radius: 12px;
@@ -166,10 +141,7 @@
             font-family: monospace;
             text-align: center;
             font-size: 0.85rem;
-            border: 1px solid #374151;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-
         .filter-core {
             width: 100px;
             height: 220px;
@@ -182,16 +154,12 @@
             align-items: center;
             justify-content: center;
         }
-
         .filter-core::after {
             content: '💧 RO-CORE';
             color: #475569;
             font-size: 0.75rem;
             font-weight: 700;
-            letter-spacing: 1px;
         }
-
-        /* Lead Capture/Newsletter Form Section */
         .newsletter-section {
             padding: 4rem 5%;
             background-color: var(--white);
@@ -199,28 +167,23 @@
             border-bottom: 1px solid var(--border);
             text-align: center;
         }
-
         .newsletter-container {
             max-width: 600px;
             margin: 0 auto;
         }
-
         .newsletter-container h3 {
             font-size: 1.75rem;
             margin-bottom: 0.5rem;
         }
-
         .newsletter-container p {
             color: var(--gray);
             margin-bottom: 1.5rem;
         }
-
         .email-form {
             display: flex;
             gap: 10px;
             justify-content: center;
         }
-
         .email-input {
             width: 100%;
             max-width: 350px;
@@ -230,7 +193,6 @@
             font-size: 1rem;
             outline: none;
         }
-
         .email-submit {
             background-color: var(--dark);
             color: var(--white);
@@ -239,25 +201,16 @@
             border-radius: 25px;
             font-weight: 600;
             cursor: pointer;
-            transition: opacity 0.2s;
         }
-
-        .email-submit:hover {
-            opacity: 0.9;
-        }
-
-        /* Features Section */
         .features {
             background-color: var(--light);
             padding: 5rem 5%;
             text-align: center;
         }
-
         .features h2 {
             font-size: 2.5rem;
             margin-bottom: 3rem;
         }
-
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -265,7 +218,6 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .card {
             background: var(--white);
             padding: 2.5rem;
@@ -273,23 +225,18 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             text-align: left;
         }
-
         .card-icon {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-
         .card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
-
         .card p {
             color: var(--gray);
             line-height: 1.5;
         }
-
-        /* Slide-out Cart Panel */
         .cart-panel {
             position: fixed;
             top: 0;
@@ -305,11 +252,9 @@
             display: flex;
             flex-direction: column;
         }
-
         .cart-panel.open {
             right: 0;
         }
-
         .cart-header {
             display: flex;
             justify-content: space-between;
@@ -318,19 +263,16 @@
             border-bottom: 1px solid var(--border);
             padding-bottom: 1rem;
         }
-
         .close-cart {
             background: none;
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
         }
-
         .cart-items {
             flex-grow: 1;
             overflow-y: auto;
         }
-
         .cart-item {
             display: flex;
             justify-content: space-between;
@@ -338,12 +280,10 @@
             padding: 1rem 0;
             border-bottom: 1px solid var(--light);
         }
-
         .cart-footer {
             border-top: 1px solid var(--border);
             padding-top: 1rem;
         }
-
         .cart-total {
             display: flex;
             justify-content: space-between;
@@ -351,7 +291,6 @@
             font-weight: 600;
             margin-bottom: 1rem;
         }
-
         .checkout-btn {
             width: 100%;
             background: var(--success);
@@ -366,7 +305,6 @@
             text-decoration: none;
             display: block;
         }
-
         footer {
             background: var(--dark);
             color: var(--white);
@@ -374,7 +312,6 @@
             text-align: center;
             font-size: 0.9rem;
         }
-
         @media (max-width: 768px) {
             .hero-container {
                 grid-template-columns: 1fr;
@@ -382,3 +319,30 @@
                 gap: 2rem;
             }
             .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            .email-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            .email-input {
+                max-width: 100%;
+            }
+            .email-submit {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo">PureStream.</a>
+        <button class="cart-btn" id="openCartBtn">
+            🛒 Cart <span class="cart-count" id="cartCount">0</span>
+        </button>
+    </nav>
+    <div class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCartBtn">&times;</button>
+        </div>
